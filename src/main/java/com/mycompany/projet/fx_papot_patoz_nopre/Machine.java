@@ -13,7 +13,7 @@ public class Machine extends Equipement {
     private float x;
     private float y;
     private float coût;
-    private float durée; // pas besoin de durée si ????
+    private float duree; // pas besoin de durée si ????
     private String etat; // "operationnel", "en arrêt", etc.
     private String type;
     
@@ -28,7 +28,7 @@ public class Machine extends Equipement {
     
     public float duree (Produit p){
             //écrire operation 
-            return durée;
+            return duree;
     }
     @Override
     public float coutOperation(float dureeOperation){
@@ -41,7 +41,7 @@ public class Machine extends Equipement {
         System.out.println("Type: " + type);
         System.out.println("Coût horaire: " + coût);
         System.out.println("Position: (" + x + ", " + y + ")");
-        System.out.println("Durée d'opération (produit spécifique) : " + durée);
+        System.out.println("Durée d'opération (produit spécifique) : " + duree);
     }
     public String getRefmachine(){
         return refEquipement;
@@ -64,7 +64,7 @@ public class Machine extends Equipement {
     }
 
     public float getDurée() {
-        return durée;
+        return duree;
     }
 
     public String getType() {
@@ -92,7 +92,7 @@ public class Machine extends Equipement {
     }
 
     public void setDurée(float durée) {
-        this.durée = durée;
+        this.duree = durée;
     }
 
     public void setType(String type) {
