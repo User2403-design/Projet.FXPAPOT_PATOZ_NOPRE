@@ -9,5 +9,5 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
  * @author chloe
  */
 public class Magasindebrut {
-    
+    private String stock;
 }

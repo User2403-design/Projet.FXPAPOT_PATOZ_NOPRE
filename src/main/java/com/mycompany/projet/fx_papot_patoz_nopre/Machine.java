@@ -34,4 +34,4 @@ public class Machine extends Equipement {
     @Override
     public float coutOperation(float dureeOperation){
         return dureeOperation * coût;
-    }
+    }}

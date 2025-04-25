@@ -8,6 +8,61 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
  *
  * @author chloe
  */
-public class Poste {
+ 
+import java.util.ArrayList;
+       
+public class Poste extends Equipement{
+    private String refposte;
+    private String dposte;
+    private ArrayList<Machine> machines;
+    
+    
+public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
+        super(refPoste,dPoste);
+        this.machines = machines;
+    }
+    @Override
+    public float coutOperation(float dureeOperation){
+        float coutTotal = 0.0f;
+        for (Machine machine : machines) {
+            coutTotal += machine.coutOperation(dureeOperation);
+        }
+        return coutTotal;
+    }
+    
+    @Override
+    public void afficherEquipement(){
+        System.out.println("Reférence Poste:"+refposte);
+        System.out.println("Designation:"+dposte);
+        for (Machine m : machines){
+            m.afficherEquipement();
+        }
+    }
+    public String getRefposte() {
+        return refposte;
+    }
+
+    public void setRefposte(String refposte) {
+        this.refposte = refposte;
+    }
+
+    public String getDposte() {
+        return dposte;
+    }
+
+    public void setDposte(String dposte) {
+        this.dposte = dposte;
+    }
+
+    public ArrayList<Machine> getMachines() {
+        return machines;
+    }
+
+    public void setMachines(ArrayList<Machine> machines) {
+        this.machines = machines;
+    }
+    
+    
     
 }
+

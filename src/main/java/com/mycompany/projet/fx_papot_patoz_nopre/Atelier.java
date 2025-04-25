@@ -4,10 +4,36 @@
  */
 package com.mycompany.projet.fx_papot_patoz_nopre;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author chloe
  */
 public class Atelier {
+    private String designation ;
+    private ArrayList<Equipement> equipements;
     
+    public Atelier(String designation, ArrayList<Equipement> equipements){
+        this.designation = designation;
+        this.equipements = equipements;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public ArrayList<Equipement> getEquipements() {
+        return equipements;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
+    public void setEquipements(ArrayList<Equipement> equipements) {
+        this.equipements = equipements;
+    }
 }
+
+   
