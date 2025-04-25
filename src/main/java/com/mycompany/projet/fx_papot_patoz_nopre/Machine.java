@@ -33,4 +33,70 @@ public class Machine extends Equipement {
     @Override
     public float coutOperation(float dureeOperation){
         return dureeOperation * coût;
-    }}
+    }
+    @Override
+    public void afficherEquipement() { // j'avais mis afficherMachine au début mais marcher pas car faut implement toute les methode de la classe Eq si on peut veut Machine soit pas une classe ab
+        System.out.println("Référence Machine: " + refEquipement);
+        System.out.println("Désignation: " + dEquipement);
+        System.out.println("Type: " + type);
+        System.out.println("Coût horaire: " + coût);
+        System.out.println("Position: (" + x + ", " + y + ")");
+        System.out.println("Durée d'opération (produit spécifique) : " + durée);
+    }
+    public String getRefmachine(){
+        return refEquipement;
+    }
+
+    public String getDmachine() {
+        return dEquipement;
+    }
+
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public float getCoût() {
+        return coût;
+    }
+
+    public float getDurée() {
+        return durée;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setRefmachine(String refmachine) {
+        this.refEquipement = refmachine;
+    }
+
+    public void setDmachine(String dmachine) {
+        this.dEquipement = dmachine;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public void setCoût(float coût) {
+        this.coût = coût;
+    }
+
+    public void setDurée(float durée) {
+        this.durée = durée;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+}
+   
