@@ -36,6 +36,6 @@ public abstract class Equipement { // abs pour rassembler les opérations commun
     public void setdEquipement(String dEquipement) {
         this.dEquipement = dEquipement;
     }
-    
+    */
 }
 
