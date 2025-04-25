@@ -9,8 +9,8 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
  * @author chloe
  */
 public class Equipement { // abs pour rassembler les opérations commune à Machine et Poste
-    private String refEquipement;
-    private String dEquipement;
+    protected String refEquipement;
+    protected String dEquipement;
     
     public Equipement(String refEquipement,String dEquipement ){
         this.refEquipement = refEquipement;
@@ -21,7 +21,7 @@ public class Equipement { // abs pour rassembler les opérations commune à Mach
     public abstract float coutOperation(float dureeOperation);
 
     
-    public String getRefEquipement() {// faut les enlever ou pas 
+    /*public String getRefEquipement() {// faut les enlever ou pas 
         return refEquipement;
     }
 
