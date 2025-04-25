@@ -11,7 +11,7 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
 public class Operation {
     private String idOperation;
     private String refOperation;
-    private Equipement refEquipement;// pr enlever l'errur dans Gamme
+    private Equipement refEquipement;
     private float dureeOperation;
     
     public Operation(String idOperation,String refOperation,Equipement refEquipement, float dureeOperation ){
