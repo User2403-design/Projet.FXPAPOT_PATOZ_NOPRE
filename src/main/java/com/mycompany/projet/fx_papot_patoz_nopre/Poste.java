@@ -31,26 +31,26 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
     
     @Override
     public void afficherEquipement(){
-        System.out.println("Reférence Poste:"+refposte);
-        System.out.println("Designation:"+dposte);
+        System.out.println("Reférence Poste:"+refEquipement);
+        System.out.println("Designation:"+dEquipement);
         for (Machine m : machines){
             m.afficherEquipement();
         }
     }
     public String getRefposte() {
-        return refposte;
+        return refEquipement;
     }
 
     public void setRefposte(String refposte) {
-        this.refposte = refposte;
+        this.refEquipement = refposte;
     }
 
     public String getDposte() {
-        return dposte;
+        return dEquipement;
     }
 
     public void setDposte(String dposte) {
-        this.dposte = dposte;
+        this.dEquipement = dposte;
     }
 
     public ArrayList<Machine> getMachines() {
