@@ -41,7 +41,7 @@ public class Machine extends Equipement {
         System.out.println("Type: " + type);
         System.out.println("Coût horaire: " + coût);
         System.out.println("Position: (" + x + ", " + y + ")");
-        System.out.println("Durée d'opération (produit spécifique) : " + duree);
+        System.out.println("Durée d'opération (produit spécifique) : " + duree);// à changé 
     }
     public String getRefmachine(){
         return refEquipement;
