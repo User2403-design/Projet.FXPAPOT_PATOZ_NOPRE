@@ -17,12 +17,12 @@ public class Machine extends Equipement {
     private String etat; // "operationnel", "en arrêt", etc.
     private String type;
     
-    public Machine (String refmachine, String dmachine, float x, float y, float cout,String etat, String type){
+    public Machine (String refmachine, String dmachine, float x, float y, float cout, String type){
         super(refmachine,dmachine);
         this.x = x;
         this.y = y;
         this.coût = cout;
-        this.etat = etat;
+        this.etat = "operationnel"; // on crée une machine donc elle forcément ope non? 
         this.type = type;    
     }
     
