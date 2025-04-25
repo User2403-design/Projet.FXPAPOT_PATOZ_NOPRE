@@ -12,7 +12,7 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
 import java.util.ArrayList;
        
 public class Poste extends Equipement{
-    //
+    
     private ArrayList<Machine> machines;
     
     
