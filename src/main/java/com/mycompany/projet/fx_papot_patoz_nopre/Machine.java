@@ -9,7 +9,7 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
  * @author Justin
  */
 public class Machine extends Equipement {
-    //
+    
     private float x;
     private float y;
     private float coût;
