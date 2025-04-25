@@ -8,7 +8,7 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
  *
  * @author chloe
  */
-public class Equipement { // abs pour rassembler les opérations commune à Machine et Poste
+public abstract class Equipement { // abs pour rassembler les opérations commune à Machine et Poste
     protected String refEquipement;
     protected String dEquipement;
     
