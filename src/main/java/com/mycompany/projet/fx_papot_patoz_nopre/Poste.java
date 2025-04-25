@@ -12,8 +12,7 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
 import java.util.ArrayList;
        
 public class Poste extends Equipement{
-    private String refposte;
-    private String dposte;
+    
     private ArrayList<Machine> machines;
     
     
