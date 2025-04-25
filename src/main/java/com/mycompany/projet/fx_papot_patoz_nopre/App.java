@@ -1,19 +1,19 @@
 package com.mycompany.projet.fx_papot_patoz_nopre;
 
 import java.util.Scanner;
-import javafx.application.Application;
+/*import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
+import javafx.stage.Stage;*/
 
 
 /**
  * JavaFX App
  */
-public class App extends Application {
+public class App{ //extends Application {
 
-    @Override
+    /*@Override
     public void start(Stage stage) {
         var javaVersion = SystemInfo.javaVersion();
         var javafxVersion = SystemInfo.javafxVersion();
@@ -22,10 +22,10 @@ public class App extends Application {
         var scene = new Scene(new StackPane(label), 640, 480);
         stage.setScene(scene);
         stage.show();
-    }
+    }*/
 
     public static void main(String[] args) {
-        launch();
+        //launch(args);
         
         Scanner scanner = new Scanner(System.in);
 
@@ -46,14 +46,14 @@ public class App extends Application {
         float cout = scanner.nextFloat();
         scanner.nextLine(); // consommer le retour à la ligne
 
-        System.out.print("Entrez l'état de la machine (ex: opérationnel, en arrêt) : ");
-        String etat = scanner.nextLine();
+        //System.out.print("Entrez l'état de la machine (ex: opérationnel, en arrêt) : ");
+        //String etat = scanner.nextLine();
 
         System.out.print("Entrez le type de la machine : ");
         String type = scanner.nextLine();
 
         // Création de l'objet Machine
-        Machine machine = new Machine(refMachine, dMachine, x, y, cout, etat, type);
+        Machine machine = new Machine(refMachine, dMachine, x, y, cout, type);
 
         // Affichage des informations de la machine
         System.out.println("Informations de la machine :");
@@ -71,4 +71,3 @@ public class App extends Application {
 
     
 
-}
