@@ -22,6 +22,10 @@ public class Magasindebrut {
         this.matiere = matiere;
         this.quantite = quantite;
     }
+    
+    public String verifierStock (String matiere, double quantite){
+        //crée un hasmap dans classe Stockage et faire vérif si ce qu'on demande est contenu 
+    }
 
     public double getQuantite() {
         return quantite;
