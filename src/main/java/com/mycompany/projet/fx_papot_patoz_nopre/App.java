@@ -39,11 +39,23 @@ public class App{ //extends Application {
         
         stockage.ajouterStocke(new Magasindebrut (matiere, quantite));
         
+        System.out.print("Entrez matiere a rechercher : ");
+        String matrech = scanner.nextLine();
         
+        System.out.print("Entrez qté a rechercher : ");
+        Double qterech = scanner.nextDouble();
+        
+        boolean trouve = stockage.VerifierStocke( stockage.getListeMagDeBrut(), matrech, qterech);
+        
+        if (trouve){
+            System.out.print("OK");
+        }else {
+            System.out.print("pas possible");
+        }
         
 
         // Demande d'informations à l'utilisateur
-        System.out.print("Entrez la référence de la machine : ");
+        /*System.out.print("Entrez la référence de la machine : ");
         String refMachine = scanner.nextLine();
 
         System.out.print("Entrez la désignation de la machine : ");
@@ -77,7 +89,7 @@ public class App{ //extends Application {
         float dureeTest = scanner.nextFloat();
         float coutOperation = machine.coutOperation(dureeTest);
         System.out.println("Coût de l'opération pour " + dureeTest + " heures : " + coutOperation + " €");
-
+*/
         scanner.close();
     }
 }
