@@ -37,7 +37,7 @@ public class App{ //extends Application {
         System.out.print("Entrez sa quantité : ");
         Double quantite = scanner.nextDouble();
         
-        scanner.nextLine();
+        scanner.nextLine();// consommer le retour a la ligne pr eviter de planter
         
         stockage.ajouterStocke(new Magasindebrut (matiere, quantite));
         
