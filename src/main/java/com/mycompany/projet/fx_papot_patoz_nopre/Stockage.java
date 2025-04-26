@@ -30,4 +30,11 @@ public class Stockage {
         this.listeProduits = new ArrayList<>();
         this.listeMagDeBrut = new ArrayList<>();
     }
+    // methode pr ajouter, modif, supp, afficher chaque el
+    
+    //verifier si une matière existe en quantité suffisante pour fabriquer un produit
+    public boolean VerifierStocke (ArrayList<Magasindebrut> mag, String matiere, double quantite){
+        return listeMagDeBrut.stream().anyMatch( m -> m.getMatiere().equals(matiere) && m.getQuantite()>= quantite );
+    }
+    
 }
