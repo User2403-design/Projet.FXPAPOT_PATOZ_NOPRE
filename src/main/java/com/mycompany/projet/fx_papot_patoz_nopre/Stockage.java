@@ -8,6 +8,26 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
  *
  * @author chloe
  */
+import java.util.ArrayList;
 public class Stockage {
     
+    //pour stocker chaque elements
+    private ArrayList<Machine> listeMachines; 
+    private ArrayList<Operation> listeOperations;
+    private ArrayList<Operateur> listeOperateurs;
+    private ArrayList<Equipement> listeEquipements;
+    private ArrayList<Gamme> listeGammes;
+    private ArrayList<Produit> listeProduits;
+    private ArrayList<Magasindebrut> listeMagDeBrut;
+    
+    //constructeur pour initialiser les listes (peut pas appelé stockage et remplir toutes les listes en mm temps : crée liste vide qu'on modifie par les methodes ajouter, supprimer de chaque classes 
+    public Stockage (){
+        this.listeMachines = new ArrayList<>();
+        this.listeOperations = new ArrayList<>();
+        this.listeOperateurs = new ArrayList<>();
+        this.listeEquipements = new ArrayList<>();
+        this.listeGammes = new ArrayList<>();
+        this.listeProduits = new ArrayList<>();
+        this.listeMagDeBrut = new ArrayList<>();
+    }
 }
