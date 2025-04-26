@@ -32,9 +32,14 @@ public class Stockage {
     }
     // methode pr ajouter, modif, supp, afficher chaque el
     
+    public void ajouterStocke (Magasindebrut stocke){
+        this.listeMagDeBrut.add(stocke);
+    }
     //verifier si une matière existe en quantité suffisante pour fabriquer un produit
     public boolean VerifierStocke (ArrayList<Magasindebrut> mag, String matiere, double quantite){
         return listeMagDeBrut.stream().anyMatch( m -> m.getMatiere().equals(matiere) && m.getQuantite()>= quantite );
     }
+    
+
     
 }
