@@ -39,6 +39,34 @@ public class Stockage {
     public boolean VerifierStocke (ArrayList<Magasindebrut> mag, String matiere, double quantite){
         return listeMagDeBrut.stream().anyMatch( m -> m.getMatiere().equals(matiere) && m.getQuantite()>= quantite );
     }
+
+    public ArrayList<Machine> getListeMachines() {
+        return listeMachines;
+    }
+
+    public ArrayList<Operation> getListeOperations() {
+        return listeOperations;
+    }
+
+    public ArrayList<Operateur> getListeOperateurs() {
+        return listeOperateurs;
+    }
+
+    public ArrayList<Equipement> getListeEquipements() {
+        return listeEquipements;
+    }
+
+    public ArrayList<Gamme> getListeGammes() {
+        return listeGammes;
+    }
+
+    public ArrayList<Produit> getListeProduits() {
+        return listeProduits;
+    }
+
+    public ArrayList<Magasindebrut> getListeMagDeBrut() {
+        return listeMagDeBrut;
+    }
     
 
     
