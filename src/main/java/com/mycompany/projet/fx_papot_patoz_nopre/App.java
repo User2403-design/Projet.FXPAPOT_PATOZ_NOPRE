@@ -28,6 +28,19 @@ public class App{ //extends Application {
         //launch(args);
         
         Scanner scanner = new Scanner(System.in);
+        
+        Stockage stockage = new Stockage();
+        
+        System.out.print("Entrez la matière: ");
+        String matiere = scanner.nextLine();
+        
+        System.out.print("Entrez sa quantité : ");
+        Double quantite = scanner.nextDouble();
+        
+        stockage.ajouterStocke(new Magasindebrut (matiere, quantite));
+        
+        
+        
 
         // Demande d'informations à l'utilisateur
         System.out.print("Entrez la référence de la machine : ");
