@@ -13,6 +13,11 @@ public class Magasindebrut {
     private String matiere;
     private double quantite;
     
+    public Magasindebrut (String matiere, double quantite){
+        this.matiere = matiere;
+        this.quantite = quantite;
+    }
+    
     public void ajouterStock (String matiere, double quantite){
         this.matiere = matiere;
         this.quantite = quantite;
