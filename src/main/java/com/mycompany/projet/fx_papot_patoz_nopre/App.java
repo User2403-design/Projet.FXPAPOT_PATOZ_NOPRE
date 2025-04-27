@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;*/
 
-
+import java.util.ArrayList;
 /**
  * JavaFX App
  */
@@ -24,12 +24,64 @@ public class App{ //extends Application {
         stage.show();
     }*/
 
+
     public static void main(String[] args) {
         //launch(args);
         
         Scanner scanner = new Scanner(System.in);
         
-        Stockage stockage = new Stockage();
+        System.out.print("Entrez nom atelier: ");
+        String nAtelier = scanner.nextLine();
+        
+        ArrayList<Equipement> eq = new ArrayList();
+        
+        while(true){
+            System.out.println("voulez vous ajouter eq ? (oui/non)"); //mettre bouton oui ou non
+            String reponse = scanner.nextLine();
+            if (reponse.equalsIgnoreCase("non")){
+                break;
+            }
+            
+            System.out.println("m ou p");
+            String typeEq = scanner.nextLine();
+            
+            if (typeEq.equalsIgnoreCase("m")){
+               System.out.println("ref :");
+               String ref = scanner.nextLine();
+               System.out.println("designation");
+               String d = scanner.nextLine();
+               System.out.println("x");
+               float x = scanner.nextFloat();
+               System.out.println("y");
+               float y = scanner.nextFloat();
+               System.out.println("cout horaire:");
+               float coutH = scanner.nextFloat();
+               //System.out.println("etat");
+               //String etat = scanner.nextLine();
+               System.out.println("type");
+               String type = scanner.nextLine();
+               
+               Machine machine = new Machine(ref,d, x, y, coutH, type  );
+               
+               eq.add(machine);
+               
+               Atelier atelier = new Atelier(nAtelier, eq);
+               
+               System.out.println("atelier crée :"+nAtelier);//atelier.nAtelier marche pas
+               System.out.println("Equipements:");
+               for (Equipement equi : eq){// atelier.eq marche pas
+                   if (equi instanceof Machine){
+                       Machine mach = (Machine) equi;
+                       mach.afficherEquipement();
+                   
+                   }
+               }
+          
+        }
+    
+        
+        
+        /*Stockage stockage = new Stockage();
         
         System.out.print("Entrez la matière: ");
         String matiere = scanner.nextLine();
@@ -53,7 +105,7 @@ public class App{ //extends Application {
             System.out.print("OK");
         }else {
             System.out.print("pas possible");
-        }
+        }*/
         
 
         // Demande d'informations à l'utilisateur
