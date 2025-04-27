@@ -56,6 +56,7 @@ public class App{ //extends Application {
                float y = scanner.nextFloat();
                System.out.println("cout horaire:");
                float coutH = scanner.nextFloat();
+               scanner.nextLine();
                System.out.println("type:");
                String type = scanner.nextLine();
                //System.out.println("etat");
