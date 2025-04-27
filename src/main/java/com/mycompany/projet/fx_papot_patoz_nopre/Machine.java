@@ -38,9 +38,9 @@ public class Machine extends Equipement {
     public void afficherEquipement() { // j'avais mis afficherMachine au début mais marcher pas car faut implement toute les methode de la classe Eq si on peut veut Machine soit pas une classe ab
         System.out.println("Reference Machine: " + refEquipement);
         System.out.println("Designation: " + dEquipement);
-        System.out.println("Type: " + type);
-        System.out.println("Cout horaire: " + coût);
         System.out.println("Position: (" + x + ", " + y + ")");
+        System.out.println("Cout horaire: " + coût);
+        System.out.println("Type: " + type);
         System.out.println("Duree d'opération (produit spécifique) : " + duree);// à changé 
     }
     public String getRefmachine(){
