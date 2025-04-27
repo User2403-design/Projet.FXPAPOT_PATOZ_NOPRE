@@ -64,7 +64,7 @@ public class App{ //extends Application {
                Machine machine = new Machine(ref,d, x, y, coutH, type  );
                
                eq.add(machine);
-               
+            }
                Atelier atelier = new Atelier(nAtelier, eq);
                
                System.out.println("atelier crée :"+nAtelier);//atelier.nAtelier marche pas
@@ -78,6 +78,7 @@ public class App{ //extends Application {
                }
           
         }
+            
     
         
         
@@ -147,7 +148,7 @@ public class App{ //extends Application {
         scanner.close();
     }
 }
-}
+
 
     
 
