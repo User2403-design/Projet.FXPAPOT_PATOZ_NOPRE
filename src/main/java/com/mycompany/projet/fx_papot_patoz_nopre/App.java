@@ -56,10 +56,11 @@ public class App{ //extends Application {
                float y = scanner.nextFloat();
                System.out.println("cout horaire:");
                float coutH = scanner.nextFloat();
-               //System.out.println("etat");
-               //String etat = scanner.nextLine();
                System.out.println("type:");
                String type = scanner.nextLine();
+               //System.out.println("etat");
+               //String etat = scanner.nextLine();
+               
                
                Machine machine = new Machine(ref,d, x, y, coutH, type  );
                
