@@ -58,7 +58,7 @@ public class App{ //extends Application {
                float coutH = scanner.nextFloat();
                //System.out.println("etat");
                //String etat = scanner.nextLine();
-               System.out.println("type");
+               System.out.println("type:");
                String type = scanner.nextLine();
                
                Machine machine = new Machine(ref,d, x, y, coutH, type  );
@@ -67,7 +67,7 @@ public class App{ //extends Application {
             }
                Atelier atelier = new Atelier(nAtelier, eq);
                
-               System.out.println("atelier crée :"+nAtelier);//atelier.nAtelier marche pas
+               System.out.println("atelier cree :"+nAtelier);//atelier.nAtelier marche pas
                System.out.println("Equipements:");
                for (Equipement equi : eq){// atelier.eq marche pas
                    if (equi instanceof Machine){
