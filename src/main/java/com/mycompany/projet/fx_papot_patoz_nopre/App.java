@@ -136,19 +136,25 @@ public class App{ //extends Application {
                Atelier atelier = new Atelier(nAtelier, eq);
                
                System.out.println("atelier cree :"+nAtelier);//atelier.nAtelier marche pas
+               System.out.println("========================");//pour la présentation
                System.out.println("Equipements:");
+               
+               System.out.println("----POSTES----");
                for (Equipement equi : eq){// atelier.eq marche pas
-                   /*if (equi instanceof Machine){
-                       Machine mach = (Machine) equi;
-                       mach.afficherEquipement();
-                   }
                    if (equi instanceof Poste){
-                       Poste post = (Poste) equi;
-                       post.afficherEquipement();
-               }*/
-                   equi.afficherEquipement();
-          
+                       System.out.println("--poste--");
+                       //Poste post = (Poste) equi;
+                       equi.afficherEquipement();
+               } 
         }
+               System.out.println("----MACHINES INDIVIDUELLES----");
+               for (Equipement equi : eq){
+                   if (equi instanceof Machine){
+                       System.out.println("--machine--");
+                       //Machine mach = (Machine) equi;
+                       equi.afficherEquipement();
+                   }
+               }
             
     
         
