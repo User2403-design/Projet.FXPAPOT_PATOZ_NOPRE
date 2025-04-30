@@ -9,6 +9,7 @@ package Modele;
  * @author chloe
  */
 import java.util.ArrayList;
+import java.util.Arrays;
 public class Stockage {
     
     //pour stocker chaque elements
@@ -121,18 +122,10 @@ public class Stockage {
     Machine M3 = new Machine("M460", "Machine d'assemblage", 23.0f, 202f, 202f, "Assemblage");
     
   
-    // Initialisation des listes de machines vides pour chaque poste
-    ArrayList<Machine> machinesPoste1 = new ArrayList<>();
-    ArrayList<Machine> machinesPoste2 = new ArrayList<>();
-    ArrayList<Machine> machinesPoste3 = new ArrayList<>();
-
-    // Ajout des machines dans les listes correspondantes
-    machinesPoste1.add(M1); // Poste 1 : Découpe
-    machinesPoste2.add(M2); // Poste 2 : Montage
-    machinesPoste3.add(M3); // Poste 3 : Assemblage
-
+    // Initialisation de la liste de machines vide pour le poste 
+    ArrayList<Machine> machinesPoste1 = new ArrayList<>(Arrays.asList(M1,M2,M3));
+   
     // Création des postes avec les machines affectées
-    Poste poste1 = new Poste("P001", "Poste de découpe", machinesPoste1);
-    Poste poste2 = new Poste("P002", "Poste de montage", machinesPoste2);
-    Poste poste3 = new Poste("P003", "Poste d'assemblage", machinesPoste3);
+    Poste Poste1 = new Poste("P001", "Poste de découpe", machinesPoste1);
+   
 }
