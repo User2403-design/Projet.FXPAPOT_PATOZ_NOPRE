@@ -116,6 +116,22 @@ public class Stockage {
         this.listeProduits.add(produit); 
     }
     
+        public void supprimerOperation(String refOperation) {
+    Operation aSupprimer = null;
+    for (Operation op : listeOperations) {
+        if (op.getRefOperation().equals(refOperation)) {
+            aSupprimer = op;
+            break;
+        }
+    }
+    if (aSupprimer != null) {
+        listeOperations.remove(aSupprimer);
+        System.out.println("Opération supprimée avec succès.");
+    } else {
+        System.out.println("Opération avec la référence " + refOperation + " non trouvée.");
+    }
+}
+    
      // Ajout de machines fictives
     Machine M1 = new Machine("M231","Machine de découpe", 0f, 0f, 234f, "Découpe");
     Machine M2 = new Machine("M232","Machine de montage", 4f, 34f, 345f, "Montage");
