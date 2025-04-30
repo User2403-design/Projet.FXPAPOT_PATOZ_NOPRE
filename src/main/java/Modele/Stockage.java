@@ -133,6 +133,6 @@ public class Stockage {
         Operation op2 = new Operation ("OP002", "Assemblage planche de bois", M3, 2.5f);
         
      // Création d'un opérateur fictif
-       Operateur operateur1 = new Operateur("O001", "Mathis TUROUNET", "Soudeuse qualifiée");
+       Operateur operateur1 = new Operateur("O001", "Mathis", "TUROUNET", true);
         
 }
