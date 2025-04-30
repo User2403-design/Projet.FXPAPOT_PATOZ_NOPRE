@@ -130,25 +130,52 @@ public class Stockage {
     } else {
         System.out.println("Opération avec la référence " + refOperation + " non trouvée.");
     }
-}
+
     
-     // Ajout de machines fictives
-    Machine M1 = new Machine("M231","Machine de découpe", 0f, 0f, 234f, "Découpe");
-    Machine M2 = new Machine("M232","Machine de montage", 4f, 34f, 345f, "Montage");
-    Machine M3 = new Machine("M460", "Machine d'assemblage", 23.0f, 202f, 202f, "Assemblage");
-    
-  
-    // Initialisation de la liste de machines vide pour le poste 
+   
+// Création des machines (équipements)
+Machine M1 = new Machine("M231", "Machine de découpe", 0f, 0f, 234f, "Découpe");
+Machine M2 = new Machine("M232", "Machine de montage", 4f, 34f, 345f, "Montage");
+Machine M3 = new Machine("M460", "Machine d'assemblage", 23.0f, 202f, 202f, "Assemblage");
+
+// Initialisation de la liste de machines vide pour le poste 
     ArrayList<Machine> machinesPoste1 = new ArrayList<>(Arrays.asList(M1,M2,M3));
-   
-    // Création des postes avec les machines affectées
-    Poste Poste1 = new Poste("P001", "Poste de découpe", machinesPoste1);
-   
-     // Ajout d'opérations fictive
-        Operation op1 = new Operation("OP001", "Découpage tôle acier", M1, 1.5f);
-        Operation op2 = new Operation ("OP002", "Assemblage planche de bois", M3, 2.5f);
-        
-     // Création d'un opérateur fictif
+    
+// Création des postes avec les machines affectées
+Poste Poste1 = new Poste("P001", "Poste de découpe", machinesPoste1);
+
+// Création des opérations pour le châssis métallique
+Operation op1 = new Operation("O001", "Découpe des plaques acier", M1, 2.0f);
+Operation op2 = new Operation("O002", "Soudage des éléments", M3, 3.5f);
+Operation op3 = new Operation("O003", "Montage du châssis", M2, 2.0f);
+
+// Création des opérations pour la pince de serrage
+Operation op4 = new Operation("O004", "Découpe des mâchoires", M1, 1.0f);
+Operation op5 = new Operation("O005", "Assemblage mécanisme", M3, 2.5f);
+Operation op6 = new Operation("O006", "Finition poignée", M2, 1.5f);
+
+// Listes d'opérations pour chaque gamme
+ArrayList<Operation> operationsChassis = new ArrayList<>(Arrays.asList(op1, op2, op3));
+ArrayList<Operation> operationsPince = new ArrayList<>(Arrays.asList(op4, op5, op6));
+
+// Listes d'équipements utilisés pour chaque produit
+ArrayList<Equipement> equipementsChassis = new ArrayList<>(Arrays.asList(M1, M2, M3));
+ArrayList<Equipement> equipementsPince = new ArrayList<>(Arrays.asList(M1, M2, M3));
+
+// Création des gammes
+Gamme gammeChassis = new Gamme("G001", operationsChassis, equipementsChassis);
+Gamme gammePince = new Gamme("G002", operationsPince, equipementsPince);
+
+// Création des produits
+ArrayList<Gamme> gammeProduitChassis = new ArrayList<>();
+gammeProduitChassis.add(gammeChassis);
+Produit produitChassis = new Produit("P001", "Châssis métallique", gammeProduitChassis);
+
+ArrayList<Gamme> gammeProduitPince = new ArrayList<>();
+gammeProduitPince.add(gammePince);
+Produit produitPince = new Produit("P002", "Pince de serrage", gammeProduitPince);
+
+// Création d'un opérateur fictif
        Operateur operateur1 = new Operateur("O001", "Mathis", "TUROUNET", true);
-        
+}
 }
