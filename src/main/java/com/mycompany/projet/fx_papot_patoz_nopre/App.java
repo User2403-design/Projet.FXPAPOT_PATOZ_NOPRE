@@ -80,7 +80,7 @@ public class App{ //extends Application {
                     String rep = scanner.nextLine();
                     
                     //verifier type de réponse
-                    if(!rep.equalsIgnoreCase("non")&&!rep.equalsIgnoreCase("oui")){
+                    while(!rep.equalsIgnoreCase("non")&&!rep.equalsIgnoreCase("oui")){
                         System.out.println("ecrire oui ou non");
                     }
                     
