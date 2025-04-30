@@ -1,5 +1,9 @@
 package com.mycompany.projet.fx_papot_patoz_nopre;
 
+import Modele.Machine;
+import Modele.Atelier;
+import Modele.Poste;
+import Modele.Equipement;
 import java.util.Scanner;
 /*import javafx.application.Application;
 import javafx.scene.Scene;
