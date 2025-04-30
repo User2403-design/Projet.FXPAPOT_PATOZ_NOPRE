@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.projet.fx_papot_patoz_nopre;
-
+import java.util.ArrayList;
 /**
  *
  * @author chloe
@@ -11,10 +11,12 @@ package com.mycompany.projet.fx_papot_patoz_nopre;
 public class Produit {
     private String codeProduit ;
     private String dProduit;
+    private ArrayList<Gamme> listeGamme; // Gamme ou String en para
     
-    public Produit(String codeProduit, String dProduit) {
+    public Produit(String codeProduit, String dProduit, ArrayList<Gamme> gammeselect ) {
         this.codeProduit = codeProduit;
         this.dProduit = dProduit;
+        this.listeGamme = new ArrayList(gammeselect);
     }
     
     public void afficherProduit(){
