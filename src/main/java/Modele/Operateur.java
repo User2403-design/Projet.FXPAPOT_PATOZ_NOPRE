@@ -17,7 +17,7 @@ public class Operateur {
     //private ArrayList<String> competence; 
     private boolean etat;
     
-    public Operateur (String nom,String prenom, String code, ArrayList<String> competence, boolean etat){
+    public Operateur (String nom,String prenom, String code, boolean etat){
         this.nom = nom;
         this.prenom = prenom;
         this.code = code;
