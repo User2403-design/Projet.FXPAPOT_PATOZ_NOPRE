@@ -44,7 +44,7 @@ public class Stockage {
     }
     
     
-    Operation op1 = new Operation("1", "OP1", m1, 30.0f);
+    
     
     public void ajouterStocke (Magasindebrut stocke){
         this.listeMagDeBrut.add(stocke);
