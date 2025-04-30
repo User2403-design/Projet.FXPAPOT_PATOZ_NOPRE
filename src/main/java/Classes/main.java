@@ -8,7 +8,12 @@ package Classes;
  *
  * @author chloe
  */
-public class main {
+public class main extends App {
+    
+    // création espace de stockage 
+    public static final Stockage stockage = new Stockage ();
+    
+    
   
   public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
