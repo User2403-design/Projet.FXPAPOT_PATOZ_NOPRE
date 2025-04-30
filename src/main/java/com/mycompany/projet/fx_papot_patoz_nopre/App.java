@@ -62,11 +62,67 @@ public class App{ //extends Application {
                //System.out.println("etat");
                //String etat = scanner.nextLine();
                
-               
                Machine machine = new Machine(ref,d, x, y, coutH, type  );
                
+               // ajout dans la liste des equipements de l'atelier
                eq.add(machine);
+               
+            }else if (typeEq.equalsIgnoreCase("p")){
+                System.out.println("Nom du poste :");
+                String nomPoste = scanner.nextLine();
+                
+                System.out.println("Designation du poste :");
+                String dPoste = scanner.nextLine();
+                
+                ArrayList<Machine> machinesPoste = new ArrayList<>();
+                while (true){
+                    System.out.println("Voulez vous ajouter une machine ? (oui/non)"); //mettre bouton pr oui/non
+                    String rep = scanner.nextLine();
+                    
+                    //verifier type de réponse
+                    if(!rep.equalsIgnoreCase("non")&&!rep.equalsIgnoreCase("oui")){
+                        System.out.println("ecrire oui ou non");
+                    }
+                    
+                    if(rep.equalsIgnoreCase("non")){
+                        break;
+                    }else{
+                       System.out.println("ref :");
+                       String refMP = scanner.nextLine();
+                       System.out.println("designation");
+                       String dMP = scanner.nextLine();
+                       System.out.println("x");
+                       float xMP = scanner.nextFloat();
+                       System.out.println("y");
+                       float yMP = scanner.nextFloat();
+                       System.out.println("cout horaire:");
+                       float coutHmP = scanner.nextFloat();
+                       scanner.nextLine();
+                       System.out.println("type:");
+                       String typeMP = scanner.nextLine(); 
+                       //etat
+                       
+                       //crée la machine correspondante
+                       Machine machinePoste = new Machine (refMP, dMP, xMP, yMP, coutHmP, typeMP);
+                       //ajout a la liste des machines composant le poste
+                       machinesPoste.add(machinePoste);
+                    }
+                }
+                    
+                    //création du Poste correspondant 
+                    Poste poste = new Poste (nomPoste, dPoste, machinesPoste);
+                    
+                    //ajout dans la liste des equipements de l'atelier
+                    eq.add(poste);
+                    
+                }
+            //verifier le type de réponse 
+                else {
+                        System.out.println("Type d'equipements non reconnu. Veuillez entrer 'm' pour machine ou 'p' pour poste");
+                        }
+                
             }
+               //crée l'atelier correspondant 
                Atelier atelier = new Atelier(nAtelier, eq);
                
                System.out.println("atelier cree :"+nAtelier);//atelier.nAtelier marche pas
@@ -75,8 +131,10 @@ public class App{ //extends Application {
                    if (equi instanceof Machine){
                        Machine mach = (Machine) equi;
                        mach.afficherEquipement();
-                   
                    }
+                   if (equi instanceof Poste){
+                       Poste post = (Poste) equi;
+                       post.afficherEquipement();
                }
           
         }
