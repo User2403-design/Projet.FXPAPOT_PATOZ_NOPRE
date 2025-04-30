@@ -138,14 +138,15 @@ public class App{ //extends Application {
                System.out.println("atelier cree :"+nAtelier);//atelier.nAtelier marche pas
                System.out.println("Equipements:");
                for (Equipement equi : eq){// atelier.eq marche pas
-                   if (equi instanceof Machine){
+                   /*if (equi instanceof Machine){
                        Machine mach = (Machine) equi;
                        mach.afficherEquipement();
                    }
                    if (equi instanceof Poste){
                        Poste post = (Poste) equi;
                        post.afficherEquipement();
-               }
+               }*/
+                   equi.afficherEquipement();
           
         }
             
