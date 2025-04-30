@@ -14,14 +14,14 @@ public class Operateur {
     private String nom;
     private String prenom;
     private String code;// peut aussi faire super classe personne pour regrouper mes 3 attributs
-    private ArrayList<String> competence; 
+    //private ArrayList<String> competence; 
     private boolean etat;
     
     public Operateur (String nom,String prenom, String code, ArrayList<String> competence, boolean etat){
         this.nom = nom;
         this.prenom = prenom;
         this.code = code;
-        this.competence = competence;
+        //this.competence = competence;
         this.etat = etat;
     }
     
