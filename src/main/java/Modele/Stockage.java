@@ -115,4 +115,24 @@ public class Stockage {
         this.listeProduits.add(produit); 
     }
     
+     // Ajout de machines fictives
+    Machine M1 = new Machine("M231","Machine de découpe", 0f, 0f, 234f, "Découpe");
+    Machine M2 = new Machine("M232","Machine de montage", 4f, 34f, 345f, "Montage");
+    Machine M3 = new Machine("M460", "Machine d'assemblage", 23.0f, 202f, 202f, "Assemblage");
+    
+  
+    // Initialisation des listes de machines vides pour chaque poste
+    ArrayList<Machine> machinesPoste1 = new ArrayList<>();
+    ArrayList<Machine> machinesPoste2 = new ArrayList<>();
+    ArrayList<Machine> machinesPoste3 = new ArrayList<>();
+
+    // Ajout des machines dans les listes correspondantes
+    machinesPoste1.add(M1); // Poste 1 : Découpe
+    machinesPoste2.add(M2); // Poste 2 : Montage
+    machinesPoste3.add(M3); // Poste 3 : Assemblage
+
+    // Création des postes avec les machines affectées
+    Poste poste1 = new Poste("P001", "Poste de découpe", machinesPoste1);
+    Poste poste2 = new Poste("P002", "Poste de montage", machinesPoste2);
+    Poste poste3 = new Poste("P003", "Poste d'assemblage", machinesPoste3);
 }
