@@ -128,4 +128,11 @@ public class Stockage {
     // Création des postes avec les machines affectées
     Poste Poste1 = new Poste("P001", "Poste de découpe", machinesPoste1);
    
+     // Ajout d'opérations fictive
+        Operation op1 = new Operation("OP001", "Découpage tôle acier", M1, 1.5f);
+        Operation op2 = new Operation ("OP002", "Assemblage planche de bois", M3, 2.5f);
+        
+     // Création d'un opérateur fictif
+       Operateur operateur1 = new Operateur("O001", "Mathis TUROUNET", "Soudeuse qualifiée");
+        
 }
