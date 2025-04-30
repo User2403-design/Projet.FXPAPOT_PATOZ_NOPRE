@@ -39,11 +39,11 @@ public class App{ //extends Application {
             System.out.println("voulez vous ajouter eq ? (oui/non)"); //mettre bouton oui ou non
             String reponse = scanner.nextLine().toLowerCase(); 
             
-            //verifier type de reponse
-            while(!reponse.equalsIgnoreCase("non")&&!reponse.equalsIgnoreCase("oui")){
+            /*verifier type de reponse
+            if (!reponse.equalsIgnoreCase("non")&&!reponse.equalsIgnoreCase("oui")){
                         System.out.println("ecrire oui ou non");
                         String reponse = scanner.nextLine();
-                    }
+                    }*/
             
             if (reponse.equalsIgnoreCase("non")){
                 break;
@@ -52,10 +52,10 @@ public class App{ //extends Application {
             System.out.println("m ou p");
             String typeEq = scanner.nextLine().toLowerCase();
             
-            //verifier type de réponse
+            /*verifier type de réponse
             while(!typeEq.equalsIgnoreCase("m")&&!typeEq.equalsIgnoreCase("p")){
                         System.out.println("Type d'equipements non reconnu. Veuillez entrer 'm' pour machine ou 'p' pour poste");
-                    }
+                    }*/
             
             
             if (typeEq.equalsIgnoreCase("m")){
@@ -92,10 +92,10 @@ public class App{ //extends Application {
                     System.out.println("Voulez vous ajouter une machine ? (oui/non)"); //mettre bouton pr oui/non
                     String rep = scanner.nextLine().toLowerCase();
                     
-                    //verifier type de réponse
+                    /*verifier type de réponse
                     while(!rep.equalsIgnoreCase("non")&&!rep.equalsIgnoreCase("oui")){
                         System.out.println("ecrire oui ou non");
-                    }
+                    }*/
                     
                     if(rep.equalsIgnoreCase("non")){
                         break;
@@ -128,7 +128,9 @@ public class App{ //extends Application {
                     //ajout dans la liste des equipements de l'atelier
                     eq.add(poste);
                     
-                }   
+                }else{
+                System.out.println("choix invalide : ecrire 'm' ou 'p'");
+            }   
             }
                //crée l'atelier correspondant 
                Atelier atelier = new Atelier(nAtelier, eq);
