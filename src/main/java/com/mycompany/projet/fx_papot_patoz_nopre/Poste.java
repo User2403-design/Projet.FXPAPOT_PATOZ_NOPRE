@@ -45,7 +45,7 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
     }
     @Override
     public void afficherEquipement(){
-        System.out.println("Reférence Poste:"+refEquipement);
+        System.out.println("Reference Poste:"+refEquipement);
         System.out.println("Designation:"+dEquipement);
         for (Machine m : machines){
             m.afficherEquipement();
