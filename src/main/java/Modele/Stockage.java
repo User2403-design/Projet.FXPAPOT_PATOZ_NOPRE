@@ -68,6 +68,37 @@ public class Stockage {
         return listeMagDeBrut;
     }
     
+    
+    // Méthodes pour ajouter des objets dans le stockage
 
+    // Ajouter une machine
+    public void ajouterMachine(Machine machine) {
+        this.machines.add(machine); // machines : liste des machines 
+    }
+
+    // Ajouter un poste de travail
+    public void ajouterPoste(Poste poste) {
+        this.postes.add(poste); // postes : listes des postes
+    }
+
+    // Ajouter une opération
+    public void ajouterOperation(Operation operation) {
+        this.operations.add(operation); // operations : listes des opérations
+    }
+
+    // Ajouter une gamme de fabrication
+    public void ajouterGamme(Gamme gamme) {
+        this.gammes.add(gamme); // gammes : listes de gammes
+    }
+
+    // Ajouter un opérateur
+    public void ajouterOperateur(Operateur operateur) {
+        this.operateurs.add(operateur); // operateur : liste d'opérateurs
+    }
+    
+    // Ajouter un opérateur
+    public void ajouterProduit(Produit produit) {
+        this.produits.add(produit); // produits : liste des produits 
+    }
     
 }
