@@ -66,6 +66,9 @@ public class Gamme {
         for (Equipement e : equipements){
             e.afficherEquipement(); //meth de la classe abs Equipement
         }
+        for (Operation op : operations) {
+        System.out.println(" - Réf Opération : " + op.getRefOperation() + ", Durée : " + op.getDureeOperation() + " minutes, Equipement utilisé : " + op.getRefEquipement().getRefEquipement());
+    }
     }    
     public float coutGamme(){    
         float coutTotal = 0;
