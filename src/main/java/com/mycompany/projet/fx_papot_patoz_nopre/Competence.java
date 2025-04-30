@@ -33,7 +33,7 @@ private int dateAffectation;
     
    
 
-    public Competence(String nom, String prenom, String code, ArrayList<String> competence, boolean etat) {
+    public Competence(String nom, String prenom, String code, ArrayList<String> competence, boolean etat) {//pk état
         super(nom, prenom, code, competence, etat);
     }
     
