@@ -19,6 +19,7 @@ public class Stockage {
     private ArrayList<Gamme> listeGammes;
     private ArrayList<Produit> listeProduits;
     private ArrayList<Magasindebrut> listeMagDeBrut;
+    private ArrayList<Poste> listePostes; 
     
     //constructeur pour initialiser les listes (peut pas appelé stockage et remplir toutes les listes en mm temps : crée liste vide qu'on modifie par les methodes ajouter, supprimer de chaque classes 
     public Stockage (){
@@ -29,8 +30,18 @@ public class Stockage {
         this.listeGammes = new ArrayList<>();
         this.listeProduits = new ArrayList<>();
         this.listeMagDeBrut = new ArrayList<>();
+        this.listePostes= new ArrayList(); 
+        
     }
     // methode pr ajouter, modif, supp, afficher chaque el
+
+    public ArrayList<Poste> getListePostes() {
+        return listePostes;
+    }
+
+    public void setListePostes(ArrayList<Poste> listePostes) {
+        this.listePostes = listePostes;
+    }
     
     
     Operation op1 = new Operation("1", "OP1", m1, 30.0f);
@@ -76,32 +87,32 @@ public class Stockage {
 
     // Ajouter une machine
     public void ajouterMachine(Machine machine) {
-        this.machines.add(machine); // machines : liste des machines 
+        this.listeMachines.add(machine); 
     }
 
     // Ajouter un poste de travail
     public void ajouterPoste(Poste poste) {
-        this.postes.add(poste); // postes : listes des postes
+        this.listePostes.add(poste); 
     }
 
     // Ajouter une opération
     public void ajouterOperation(Operation operation) {
-        this.operations.add(operation); // operations : listes des opérations
+        this.listeOperations.add(operation); 
     }
 
     // Ajouter une gamme de fabrication
     public void ajouterGamme(Gamme gamme) {
-        this.gammes.add(gamme); // gammes : listes de gammes
+        this.listeGammes.add(gamme); 
     }
 
     // Ajouter un opérateur
     public void ajouterOperateur(Operateur operateur) {
-        this.operateurs.add(operateur); // operateur : liste d'opérateurs
+        this.listeOperateurs.add(operateur);
     }
     
     // Ajouter un opérateur
     public void ajouterProduit(Produit produit) {
-        this.produits.add(produit); // produits : liste des produits 
+        this.listeProduits.add(produit); 
     }
     
 }
