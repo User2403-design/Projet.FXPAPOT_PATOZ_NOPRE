@@ -26,6 +26,13 @@ public class Operation {
         refEquipement.afficherEquipement();  // Affiche les informations de l'équipement
         System.out.println("Durée de l'opération: " + dureeOperation + " heures");
     }
+    
+    public void ajouterOperation (String idOperation,String refOperation,Equipement refEquipement, float dureeOperation){
+        this.idOperation = idOperation;
+        this.refOperation = refOperation;
+        this.refEquipement = refEquipement;
+        this.dureeOperation = dureeOperation;
+    }
 
     public String getIdOperation() {
         return idOperation;
