@@ -37,11 +37,12 @@ public class App{ //extends Application {
         
         while(true){
             System.out.println("voulez vous ajouter eq ? (oui/non)"); //mettre bouton oui ou non
-            String reponse = scanner.nextLine();
+            String reponse = scanner.nextLine().toLowerCase(); 
             
             //verifier type de reponse
-            if(!reponse.equalsIgnoreCase("non")&&!reponse.equalsIgnoreCase("oui")){
+            while(!reponse.equalsIgnoreCase("non")&&!reponse.equalsIgnoreCase("oui")){
                         System.out.println("ecrire oui ou non");
+                        String reponse = scanner.nextLine();
                     }
             
             if (reponse.equalsIgnoreCase("non")){
@@ -49,7 +50,7 @@ public class App{ //extends Application {
             }
             
             System.out.println("m ou p");
-            String typeEq = scanner.nextLine();
+            String typeEq = scanner.nextLine().toLowerCase();
             
             //verifier type de réponse
             while(!typeEq.equalsIgnoreCase("m")&&!typeEq.equalsIgnoreCase("p")){
@@ -89,7 +90,7 @@ public class App{ //extends Application {
                 ArrayList<Machine> machinesPoste = new ArrayList<>();
                 while (true){
                     System.out.println("Voulez vous ajouter une machine ? (oui/non)"); //mettre bouton pr oui/non
-                    String rep = scanner.nextLine();
+                    String rep = scanner.nextLine().toLowerCase();
                     
                     //verifier type de réponse
                     while(!rep.equalsIgnoreCase("non")&&!rep.equalsIgnoreCase("oui")){
