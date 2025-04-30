@@ -40,7 +40,7 @@ public class App{ //extends Application {
             String reponse = scanner.nextLine();
             
             //verifier type de reponse
-            while(!reponse.equalsIgnoreCase("non")&&!reponse.equalsIgnoreCase("oui")){
+            if(!reponse.equalsIgnoreCase("non")&&!reponse.equalsIgnoreCase("oui")){
                         System.out.println("ecrire oui ou non");
                     }
             
