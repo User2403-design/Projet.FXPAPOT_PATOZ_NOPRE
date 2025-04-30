@@ -26,10 +26,14 @@ public class Machine extends Equipement {
         this.type = type;    
     }
     
+    // ajouter methode pour changer etat et temps avant libération
+    
     public float duree (Produit p){
             //écrire operation 
             return duree;
     }
+    
+   
     @Override
     public float coutOperation(float dureeOperation){
         return dureeOperation * coût;
