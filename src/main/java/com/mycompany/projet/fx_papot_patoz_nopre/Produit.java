@@ -19,6 +19,11 @@ public class Produit {
         this.listeGamme = new ArrayList(gammeselect);
     }
     
+    // a compléter
+    //public boolean LancerFabricationProduit (){
+        
+    //}
+    
     public void afficherProduit(){
         System.out.println("code du produit:"+codeProduit);
         System.out.println("désignation du produit:"+dProduit);
