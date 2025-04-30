@@ -19,6 +19,7 @@ public class Produit {
         this.listeGamme = new ArrayList(gammeselect);
     }
     
+    
     // a compléter
     //public boolean LancerFabricationProduit (){
         

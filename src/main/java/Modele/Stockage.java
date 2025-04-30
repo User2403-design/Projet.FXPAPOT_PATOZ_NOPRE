@@ -32,6 +32,9 @@ public class Stockage {
     }
     // methode pr ajouter, modif, supp, afficher chaque el
     
+    
+    Operation op1 = new Operation("1", "OP1", m1, 30.0f);
+    
     public void ajouterStocke (Magasindebrut stocke){
         this.listeMagDeBrut.add(stocke);
     }

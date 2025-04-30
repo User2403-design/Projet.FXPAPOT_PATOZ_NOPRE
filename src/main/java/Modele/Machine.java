@@ -24,9 +24,10 @@ public class Machine extends Equipement {
         this.coût = cout;
         this.etat = "operationnel"; // on crée une machine donc elle forcément ope non? 
         this.type = type;    
-    }
-    
+    }  
+   
     // ajouter methode pour changer etat et temps avant libération
+    
     
     public float duree (Produit p){
             //écrire operation 

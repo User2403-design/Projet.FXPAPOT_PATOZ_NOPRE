@@ -22,6 +22,7 @@ public class Gamme {
     }
     // le constructeur et créeGamme font la mm chose donc on fait qd mm créeGamme ?
     
+  
     //jsp laquel des deux est la mieux 
     public void modifierGamme (ArrayList<Operation> operations, ArrayList<Equipement> equipements ){
         this.operations = operations;
