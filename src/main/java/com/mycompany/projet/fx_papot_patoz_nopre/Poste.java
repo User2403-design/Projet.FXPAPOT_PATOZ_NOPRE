@@ -47,8 +47,10 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
     public void afficherEquipement(){
         System.out.println("Reference Poste:"+refEquipement);
         System.out.println("Designation:"+dEquipement);
+        System.out.println("--------");//pour la présentation
         for (Machine m : machines){
             m.afficherEquipement();
+            System.out.println("--------");
         }
     }
     public String getRefposte() {
