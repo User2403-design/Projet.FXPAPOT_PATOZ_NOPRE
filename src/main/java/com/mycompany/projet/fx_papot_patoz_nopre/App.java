@@ -38,12 +38,24 @@ public class App{ //extends Application {
         while(true){
             System.out.println("voulez vous ajouter eq ? (oui/non)"); //mettre bouton oui ou non
             String reponse = scanner.nextLine();
+            
+            //verifier type de reponse
+            while(!reponse.equalsIgnoreCase("non")&&!reponse.equalsIgnoreCase("oui")){
+                        System.out.println("ecrire oui ou non");
+                    }
+            
             if (reponse.equalsIgnoreCase("non")){
                 break;
             }
             
             System.out.println("m ou p");
             String typeEq = scanner.nextLine();
+            
+            //verifier type de réponse
+            while(!typeEq.equalsIgnoreCase("m")&&!typeEq.equalsIgnoreCase("p")){
+                        System.out.println("Type d'equipements non reconnu. Veuillez entrer 'm' pour machine ou 'p' pour poste");
+                    }
+            
             
             if (typeEq.equalsIgnoreCase("m")){
                System.out.println("ref :");
@@ -115,12 +127,7 @@ public class App{ //extends Application {
                     //ajout dans la liste des equipements de l'atelier
                     eq.add(poste);
                     
-                }
-            //verifier le type de réponse 
-                else {
-                        System.out.println("Type d'equipements non reconnu. Veuillez entrer 'm' pour machine ou 'p' pour poste");
-                        }
-                
+                }   
             }
                //crée l'atelier correspondant 
                Atelier atelier = new Atelier(nAtelier, eq);
