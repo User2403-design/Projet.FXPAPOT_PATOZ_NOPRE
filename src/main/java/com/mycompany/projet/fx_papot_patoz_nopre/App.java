@@ -27,12 +27,10 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-        launch(args);
-        
-        
-            
-          
+    public static void main(String[] args) {
+        launch(args);     
     }
+}
 
 
 
