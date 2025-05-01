@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author chloe
  */
-public class Competence extends Operateur  {
+/*public class Competence extends Operateur  {
     
 private int niveauExpertise ;
 private int dateAffectation;
@@ -37,4 +37,4 @@ private int dateAffectation;
         super(nom, prenom, code, competence, etat);
     }
     
-}
+}*/
