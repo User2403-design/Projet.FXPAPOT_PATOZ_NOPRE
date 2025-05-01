@@ -38,6 +38,8 @@ public class Machine extends Equipement {
     
    
     @Override
+    public 
+    // sert pas a grand chose faut la modifier
     public float coutOperation(float dureeOperation){
         return dureeOperation * coût;
     }
