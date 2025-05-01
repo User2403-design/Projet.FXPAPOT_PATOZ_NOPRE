@@ -66,7 +66,7 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
      public String getRefposte() {
         return refEquipement;
     }
-    */
+    
 
     public void setRefposte(String refposte) {
         this.refEquipement = refposte;
