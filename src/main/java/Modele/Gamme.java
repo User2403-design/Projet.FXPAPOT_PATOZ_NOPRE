@@ -23,44 +23,8 @@ public class Gamme {
     // le constructeur et créeGamme font la mm chose donc on fait qd mm créeGamme ?
     
   
-    //A refaire 
-    public void modifierGamme (ArrayList<Operation> operations, ArrayList<Equipement> equipements ){
-        this.operations = operations;
-        this.equipements = equipements;
-        // peut être améliorer car la on change tout mais avec index on pourrait changer qu'ne opé/eq dans la liste
-    
-    } 
-
-    public void modifierGamme(String refOperation, float nouvelleDuree, Equipement nouvelEquipement) {// on met objet de type opération direct car si on veux juste changer la durée ou l'équipement c'est plus simple
-    boolean trouve = false; // pour caractèriser le fait qu'on trouve ou non une opération correspondante à la ref entrée 
-
-    for (Operation op : operations) {
-        if (op.getRefOperation().equals(refOperation)) {
-            op.setDureeOperation(nouvelleDuree);
-            op.setRefEquipement(nouvelEquipement);
-
-            //mis à jour de la liste des equipements si besoin
-            if (!equipements.contains(nouvelEquipement)) {
-                equipements.add(nouvelEquipement);
-            }
-
-            trouve = true;// si on trouve une ope qui correspond à la ref trouve=true donc c'est ok on sort de la boucle 
-            System.out.println("Opération modifiée avec succès.");
-            break;
-        }
-    }
-
-    if (!trouve) { // sinon trouve reste false donc on affiche un message d'erreur
-        System.out.println("Aucune opération trouvée avec la référence : " + refOperation);
-    }
-}
-    
-    //public void supprimerGamme(){
-        //this.refGamme = null;
-        //this.operations.clear(); // clear = methode qui vide une liste en gardant sa ref (pas besoin de crée nouvelle instance : this.ope = list vide)
-        //this.equipements.clear();
-        // pareil peut supp q'une seul ope si besoin avec index : le faire dans modifier ! 
-    //}
+    //Modifier Gamme a faire dans l'interface 
+   
     
     public void afficherGamme (){
         System.out.println ("Référence de la Gamme :"+refGamme);
