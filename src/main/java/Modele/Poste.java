@@ -14,8 +14,7 @@ import java.util.ArrayList;
 public class Poste extends Equipement{
     
     private ArrayList<Machine> machines;
-    //private String refPoste;
-    //private String dPoste;
+    
     
 public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
         super(refPoste,dPoste);
@@ -57,14 +56,7 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
         }
     }
     
-    // Methode afficher poste 
-    /* public void afficherPoste() {
-     System.out.println("=== Poste de travail ===");
-     System.out.println("Reference du poste : " + refPoste);
-     System.out.println(" Désignation : " + dPoste);
-     System.out.println("Listes des machines associées :" + machines  );
-     
-     }
+   
      public String getRefposte() {
         return refEquipement;
     }
