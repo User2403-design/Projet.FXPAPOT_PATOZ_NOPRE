@@ -70,19 +70,9 @@ public class Stockage {
         this.listeOperations.add(op5);
         this.listeOperations.add(op6);
 
-        // Listes d'opérations pour chaque gamme
-        // co pour machine, pas obliger de le faire en vrai, peut direct ajouter dans la gamme 
-        ArrayList<Operation> operationsChassis = new ArrayList<>(Arrays.asList(op1, op2, op3));
-        ArrayList<Operation> operationsPince = new ArrayList<>(Arrays.asList(op4, op5, op6));
-
-        // Listes d'équipements utilisés pour chaque produit
-        //pareil
-        ArrayList<Equipement> equipementsChassis = new ArrayList<>(Arrays.asList(M1, M2, M3));
-        ArrayList<Equipement> equipementsPince = new ArrayList<>(Arrays.asList(M1, M2, M3));
-
         // Création des gammes
-        Gamme gammeChassis = new Gamme("G001", operationsChassis, equipementsChassis);
-        Gamme gammePince = new Gamme("G002", operationsPince, equipementsPince);
+        Gamme gammeChassis = new Gamme("G001", new ArrayList<>(Arrays.asList(op1, op2, op3)), new ArrayList<>(Arrays.asList(M1, M2, M3)));
+        Gamme gammePince = new Gamme("G002", new ArrayList<>(Arrays.asList(op4, op5, op6)), new ArrayList<>(Arrays.asList(M1, M2, M3)));
 
         this.listeGammes.add(gammeChassis);
         this.listeGammes.add(gammePince);
