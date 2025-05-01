@@ -16,6 +16,7 @@ public class Machine extends Equipement {
     private float duree; // pas besoin de durée si ????
     private String etat; // "operationnel", "en arrêt","libre", "occupé"
     private String type;
+    //private 
     
     public Machine (String refmachine, String dmachine, float x, float y, float cout, String type){
         super(refmachine,dmachine);
