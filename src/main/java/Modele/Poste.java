@@ -29,6 +29,8 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
         }
         return coutTotal;
     }
+    
+    // faire modifer et ajouter dans l'interface mais voir methodes ci dessous qui peuvent servir
     //Tout les methodes servant pour modifier un Poste
     // Pour ajouter une machine à la liste  
     public void ajouterMachine(Machine machine) {
