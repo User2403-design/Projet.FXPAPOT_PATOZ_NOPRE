@@ -9,9 +9,9 @@ public class Operateur {
     private String nom;
     private String prenom;
     private String code; // Peut faire partie d'une superclasse "Personne", comme vous voulez
-    private boolean etat;
+    private int etat; // 0=libre, 1=occupé
 
-    public Operateur(String nom, String prenom, String code, boolean etat) {
+    public Operateur(String nom, String prenom, String code, int etat) {
         this.nom = nom;
         this.prenom = prenom;
         this.code = code;
@@ -25,7 +25,7 @@ public class Operateur {
         System.out.println("Nom : " + nom);
         System.out.println("Prénom : " + prenom);
         System.out.println("Code : " + code);
-        System.out.println("État : " + (etat ? "Disponible" : "Occupé"));
+        System.out.println("État : " + etat);
     }
 
     // Getters
@@ -41,7 +41,7 @@ public class Operateur {
         return code;
     }
 
-    public boolean getEtat() {
+    public int getEtat() {
         return etat;
     }
 
@@ -58,7 +58,7 @@ public class Operateur {
         this.code = code;
     }
 
-    public void setEtat(boolean etat) {
+    public void setEtat(int etat) {
         this.etat = etat;
     }
 }
