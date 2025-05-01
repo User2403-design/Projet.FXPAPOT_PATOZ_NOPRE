@@ -46,13 +46,25 @@ public class Gamme {
     }
     
     //a changer 
-    public float dureeGamme() {
+    /*public float dureeGamme() {
         float dureeTotal = 0;
         for (Operation opr : operations) {
             dureeTotal += opr.getDureeOperation(); // pour chaque opé on récup sa durée (attribut de opé) mais comme privé on utilie get
         }
         return dureeTotal;
+    }*/
+    
+    public float dureeGamme(){
+        float dureeMax = 0;
+
+        for (Operation op : operations) {
+        	if (op.getDureeOperation()>dureeMax) {
+        		dureeMax = op.getDureeOperation();
+        	} 
+        }
+        return dureeMax;
     }
+    
     public String getRefGamme() {
         return refGamme;
     }
