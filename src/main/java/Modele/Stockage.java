@@ -130,6 +130,7 @@ public class Stockage {
     } else {
         System.out.println("Opération avec la référence " + refOperation + " non trouvée.");
     }
+        }
 
     
    
@@ -137,12 +138,21 @@ public class Stockage {
 Machine M1 = new Machine("M231", "Machine de découpe", 0f, 0f, 234f, "Découpe");
 Machine M2 = new Machine("M232", "Machine de montage", 4f, 34f, 345f, "Montage");
 Machine M3 = new Machine("M460", "Machine d'assemblage", 23.0f, 202f, 202f, "Assemblage");
+Machine M4 = new Machine ("M543", "Machine de fraisage", 12f, 3f, 120f, "Fraisage");
+
+//ajout de la machine dans la liste des machines individuelle
+this.listeMachines.add(M4);
 
 // Initialisation de la liste de machines
     //ArrayList<Machine> machinesPoste1 = new ArrayList<>(Arrays.asList(M1,M2,M3));
     
 // Création des postes avec les machines affectées
 Poste Poste1 = new Poste("P001", "Poste de découpe", new ArrayList<>(Arrays.asList(M1,M2,M3)));
+
+//ajout du poste dans la liste des postes
+this.listePostes.add(Poste1);
+
+//ajouter dans listeEquipement sert a quelquechose ?
 
 // Création des opérations pour le châssis métallique
 Operation op1 = new Operation("O001", "Découpe des plaques acier", M1, 2.0f);
@@ -154,11 +164,20 @@ Operation op4 = new Operation("O004", "Découpe des mâchoires", M1, 1.0f);
 Operation op5 = new Operation("O005", "Assemblage mécanisme", M3, 2.5f);
 Operation op6 = new Operation("O006", "Finition poignée", M2, 1.5f);
 
+this.listeOperations.add(op1);
+this.listeOperations.add(op2);
+this.listeOperations.add(op3);
+this.listeOperations.add(op4);
+this.listeOperations.add(op5);
+this.listeOperations.add(op6);
+
 // Listes d'opérations pour chaque gamme
+// co pour machine, pas obliger de le faire en vrai, peut direct ajouter dans la gamme 
 ArrayList<Operation> operationsChassis = new ArrayList<>(Arrays.asList(op1, op2, op3));
 ArrayList<Operation> operationsPince = new ArrayList<>(Arrays.asList(op4, op5, op6));
 
 // Listes d'équipements utilisés pour chaque produit
+//pareil
 ArrayList<Equipement> equipementsChassis = new ArrayList<>(Arrays.asList(M1, M2, M3));
 ArrayList<Equipement> equipementsPince = new ArrayList<>(Arrays.asList(M1, M2, M3));
 
@@ -166,16 +185,24 @@ ArrayList<Equipement> equipementsPince = new ArrayList<>(Arrays.asList(M1, M2, M
 Gamme gammeChassis = new Gamme("G001", operationsChassis, equipementsChassis);
 Gamme gammePince = new Gamme("G002", operationsPince, equipementsPince);
 
+this.listeGammes.add(gammeChassis);
+this.listeGammes.add(gammePince);
+
 // Création des produits
 ArrayList<Gamme> gammeProduitChassis = new ArrayList<>();
 gammeProduitChassis.add(gammeChassis);
-Produit produitChassis = new Produit("P001", "Châssis métallique", gammeProduitChassis);
+Produit Chassis = new Produit("P001", "Châssis métallique", gammeProduitChassis); //Chassis ou Produit1
 
 ArrayList<Gamme> gammeProduitPince = new ArrayList<>();
 gammeProduitPince.add(gammePince);
-Produit produitPince = new Produit("P002", "Pince de serrage", gammeProduitPince);
+Produit Pince = new Produit("P002", "Pince de serrage", gammeProduitPince);
+
+this.listeProduits.add(Chassis);
+this.listeProduits.add(Pince);
 
 // Création d'un opérateur fictif
        Operateur operateur1 = new Operateur("O001", "Mathis", "TUROUNET", true);
-}
+       
+       this.listeOperateurs.add(operateur1);
+
 }
