@@ -1,17 +1,13 @@
 package com.mycompany.projet.fx_papot_patoz_nopre;
 
-import Modele.Machine;
-import Modele.Atelier;
-import Modele.Poste;
-import Modele.Equipement;
-import java.util.Scanner;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
+
 /**
  * JavaFX App
  */
@@ -27,9 +23,11 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
     public static void main(String[] args) {
-        launch(args);     
+        launch();
     }
+
 }
 
 
