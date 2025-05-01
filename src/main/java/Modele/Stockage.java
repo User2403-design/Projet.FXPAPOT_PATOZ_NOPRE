@@ -138,11 +138,11 @@ Machine M1 = new Machine("M231", "Machine de découpe", 0f, 0f, 234f, "Découpe"
 Machine M2 = new Machine("M232", "Machine de montage", 4f, 34f, 345f, "Montage");
 Machine M3 = new Machine("M460", "Machine d'assemblage", 23.0f, 202f, 202f, "Assemblage");
 
-// Initialisation de la liste de machines vide pour le poste 
-    ArrayList<Machine> machinesPoste1 = new ArrayList<>(Arrays.asList(M1,M2,M3));
+// Initialisation de la liste de machines
+    //ArrayList<Machine> machinesPoste1 = new ArrayList<>(Arrays.asList(M1,M2,M3));
     
 // Création des postes avec les machines affectées
-Poste Poste1 = new Poste("P001", "Poste de découpe", machinesPoste1);
+Poste Poste1 = new Poste("P001", "Poste de découpe", new ArrayList<>(Arrays.asList(M1,M2,M3)));
 
 // Création des opérations pour le châssis métallique
 Operation op1 = new Operation("O001", "Découpe des plaques acier", M1, 2.0f);
