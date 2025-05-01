@@ -45,14 +45,6 @@ public class Gamme {
         return coutTotal;         
     }
     
-    //a changer 
-    /*public float dureeGamme() {
-        float dureeTotal = 0;
-        for (Operation opr : operations) {
-            dureeTotal += opr.getDureeOperation(); // pour chaque opé on récup sa durée (attribut de opé) mais comme privé on utilie get
-        }
-        return dureeTotal;
-    }*/
     
     public float dureeGamme(){
         float dureeMax = 0;
