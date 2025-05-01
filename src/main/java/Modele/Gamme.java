@@ -20,10 +20,11 @@ public class Gamme {
         this.operations = operations;
         this.equipements = equipements;        
     }
-    // le constructeur et créeGamme font la mm chose donc on fait qd mm créeGamme ?
+    
     
   
-    //Modifier Gamme a faire dans l'interface 
+    //Modifier Gamme a faire dans l'interface
+    //Ajouter Gamme aussi
    
     
     public void afficherGamme (){
