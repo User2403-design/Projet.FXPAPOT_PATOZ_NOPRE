@@ -51,7 +51,7 @@ public class Stockage {
         //ajout du poste dans la liste des postes
         this.listePostes.add(Poste1);
 
-        //ajouter dans listeEquipement sert a quelquechose ?
+        //ajouter dans la liste equipement mais jsp comment le faire le plus optimisé 
 
         // Création des opérations pour le châssis métallique
         Operation op1 = new Operation("O001", "Découpe des plaques acier", M1, 2.0f);
@@ -166,7 +166,8 @@ public class Stockage {
 
     // Ajouter une opération
     public void ajouterOperation(Operation operation) {
-        this.listeOperations.add(operation); 
+        this.listeOperations.add(operation);// verif que l'equipement existe
+        
     }
 
     // Ajouter une gamme de fabrication
