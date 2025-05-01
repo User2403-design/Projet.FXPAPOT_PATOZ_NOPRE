@@ -8,7 +8,7 @@ package Modele;
  *
  * @author chloe
  */
-public abstract class Equipement { // abs pour rassembler les opérations commune à Machine et Poste
+public abstract class Equipement { 
     protected String refEquipement;
     protected String dEquipement;
     
