@@ -360,16 +360,4 @@ public class Stockage {
         }
     }
     
-      // Méthode statique pour supprimer une opération à partir de son ID
-    public static boolean supprimerOperationParId(ArrayList<Operation> listeOperations, String idOperation) {
-        for (int i = 0; i < listeOperations.size(); i++) {
-            if (listeOperations.get(i).getIdOperation().equals(idOperation)) {
-                listeOperations.remove(i);
-                System.out.println("Opération avec l'ID " + idOperation + " supprimée.");
-                return true;
-            }
-        }
-        System.out.println("Aucune opération trouvée avec l'ID " + idOperation);
-        return false;
-    }
 }
