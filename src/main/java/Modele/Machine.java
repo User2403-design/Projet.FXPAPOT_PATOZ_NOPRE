@@ -28,7 +28,9 @@ public class Machine extends Equipement {
    
     // ajouter methode pour changer etat et temps avant libération
     
+    public void ajouterMachine(){
         
+    }    
     
     public float duree (Produit p, String refmachine){
             //parcourir les operations dans la gamme liée au prduit et faire verif quand l'equipement utilisé à la mm ref que celui entrée en parametre, 
@@ -48,7 +50,7 @@ public class Machine extends Equipement {
     }
     
     @Override
-    public void afficherEquipement() { // j'avais mis afficherMachine au début mais marcher pas car faut implement toute les methode de la classe Eq si on peut veut Machine soit pas une classe ab
+    public void afficherEquipement() { 
         System.out.println("Reference Machine: " + refEquipement);
         System.out.println("Designation: " + dEquipement);
         System.out.println("Position: (" + x + ", " + y + ")");
