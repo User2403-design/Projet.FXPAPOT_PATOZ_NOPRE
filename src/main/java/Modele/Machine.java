@@ -21,7 +21,7 @@ public class Machine extends Equipement {
         super(refmachine,dmachine);
         this.x = x;
         this.y = y;
-        this.coût = cout;
+        this.coût = cout;//correspond au cout horaire
         this.etat = "operationnel"; // on crée une machine donc elle forcément ope non? 
         this.type = type;    
     }  
@@ -41,6 +41,7 @@ public class Machine extends Equipement {
     public float coutOperation(float dureeOperation){
         return dureeOperation * coût;
     }
+    
     @Override
     public void afficherEquipement() { // j'avais mis afficherMachine au début mais marcher pas car faut implement toute les methode de la classe Eq si on peut veut Machine soit pas une classe ab
         System.out.println("Reference Machine: " + refEquipement);
