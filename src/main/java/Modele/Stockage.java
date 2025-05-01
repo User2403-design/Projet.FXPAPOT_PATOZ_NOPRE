@@ -187,20 +187,189 @@ public class Stockage {
     
     //methodes pour supprimer
     
-        public void supprimerOperation(String refOperation) {
-    Operation aSupprimer = null;
-    for (Operation op : listeOperations) {
-        if (op.getRefOperation().equals(refOperation)) {
-            aSupprimer = op;
-            break;
+    public void supprimerOperation(String refOperation) {
+         Operation aSupprimer = null;
+            for (Operation op : listeOperations) {
+                if (op.getRefOperation().equals(refOperation)) {
+                aSupprimer = op;
+                break;
+            }
+        }
+                if (aSupprimer != null) {
+                     listeOperations.remove(aSupprimer);
+                    System.out.println("Opération supprimée avec succès.");
+        }       else {
+            System.out.println("Opération avec la référence " + refOperation + " non trouvée.");
         }
     }
-    if (aSupprimer != null) {
-        listeOperations.remove(aSupprimer);
-        System.out.println("Opération supprimée avec succès.");
-    } else {
-        System.out.println("Opération avec la référence " + refOperation + " non trouvée.");
-    }
+  
+    public void supprimerGamme(String refGamme) {
+        Gamme aSupprimer = null;
+        for (Gamme g : listeGammes) {
+            if (g.getRefGamme().equals(refGamme)) {
+                aSupprimer = g;
+                break;
+            }
         }
+        if (aSupprimer != null) {
+            listeGammes.remove(aSupprimer);
+            System.out.println("Gamme supprimée avec succès.");
+        } else {
+            System.out.println("Gamme avec la référence " + refGamme + " non trouvée.");
+        }
+    }
 
+    public void supprimerProduit(String refProduit) {
+         Produit aSupprimer = null;
+        for (Produit p : listeProduits) {
+            if (p.getCodeProduit().equals(refProduit)) {
+                aSupprimer = p;
+                break;
+            }
+        }
+        if (aSupprimer != null) {
+            listeProduits.remove(aSupprimer);
+            System.out.println("Produit supprimé avec succès.");
+        } else {
+            System.out.println("Produit avec la référence " + refProduit + " non trouvé.");
+        }
+    }
+
+
+    public void supprimerEquipement(String refEquipement) {
+        Equipement aSupprimer = null;
+        for (Equipement e : listeEquipements) {
+            if (e.refEquipement.equals(refEquipement)) {
+                aSupprimer = e;
+                break;
+            }
+        }
+        if (aSupprimer != null) {
+            listeEquipements.remove(aSupprimer);
+            System.out.println("Équipement supprimé avec succès.");
+        } else {
+            System.out.println("Équipement avec la référence " + refEquipement + " non trouvé.");
+        }
+    }
+    
+    
+    
+    public void supprimerOperateur(String codeOperateur) {
+       Operateur aSupprimer = null;
+       for (Operateur o : listeOperateurs) {
+           if (o.getCode().equals(codeOperateur)) {
+               aSupprimer = o;
+               break;
+           }
+       }
+       if (aSupprimer != null) {
+           listeOperateurs.remove(aSupprimer);
+           System.out.println("Opérateur supprimé avec succès.");
+       } else {
+           System.out.println("Opérateur avec le code " + codeOperateur + " non trouvé.");
+       }
+   }
+
+    
+    public void supprimerMachine(String refMachine) {
+        Machine aSupprimer = null;
+        for (Machine m : listeMachines) {
+            if (m.getRefmachine().equals(refMachine)) {
+                aSupprimer = m;
+                break;
+            }
+        }
+        if (aSupprimer != null) {
+            listeMachines.remove(aSupprimer);
+            System.out.println("Machine supprimée avec succès.");
+        } else {
+            System.out.println("Machine avec la référence " + refMachine + " non trouvée.");
+        }
+    }
+
+   
+    public void supprimerPoste(String refPoste) {
+        Poste aSupprimer = null;
+        for (Poste p : listePostes) {
+            if (p.refEquipement.equals(refPoste)) {
+                aSupprimer = p;
+                break;
+            }
+        }
+        if (aSupprimer != null) {
+            listePostes.remove(aSupprimer);
+            System.out.println("Poste supprimé avec succès.");
+        } else {
+            System.out.println("Poste avec la référence " + refPoste + " non trouvé.");
+        }
+    }
+    
+
+     // afficher toutes les gammes disponibles 
+        public void afficherToutesLesGammesDisponibles() {
+        System.out.println("Liste des gammes disponibles :");
+        for (Gamme g : listeGammes) {
+            g.afficherGamme();
+        }
+        }
+        
+     // afficher toutes les machines
+     
+         public void afficherToutesLesMachines() {
+        System.out.println("Liste des machines disponibles :");
+        for (Machine m : listeMachines) {
+            m.afficherEquipement(); // si tu as une méthode d’affichage dans Machine/Equipement
+    }
+         }
+         
+     // afficher tous les produits 
+         
+          public void afficherTousLesProduits() {
+        System.out.println("Produits disponibles :");
+        for (Produit p : listeProduits) {
+            p.afficherProduit();
+        }
+    }
+
+          // afficher tous les opérateurs 
+    public void afficherTousLesOperateurs() {
+        System.out.println("Opérateurs disponibles :");
+        for (Operateur o : listeOperateurs) {
+            o.afficherOperateur();
+        }
+    }
+    //afficher toutes les opérations
+    public void afficherToutesLesOperations() {
+        System.out.println("Opérations disponibles :");
+        for (Operation op : listeOperations) {
+            op.afficherOperation();
+        }
+    }
+    //afficher tous les postes de travail
+    public void afficherTousLesPostesTravail() {
+        System.out.println("Postes de travail disponibles :");
+        for (Poste pt : listePostes) {
+            pt.afficherEquipement(); 
+        }
+    }
+    // afficher tous les équipements 
+    public void afficherTousLesEquipements() {
+        System.out.println("Équipements disponibles :");
+        for (Equipement eq : listeEquipements) {
+            eq.afficherEquipement();
+        }
+    }
+    
+      // Méthode statique pour supprimer une opération à partir de son ID
+    public static boolean supprimerOperationParId(ArrayList<Operation> listeOperations, String idOperation) {
+        for (int i = 0; i < listeOperations.size(); i++) {
+            if (listeOperations.get(i).getIdOperation().equals(idOperation)) {
+                listeOperations.remove(i);
+                System.out.println("Opération avec l'ID " + idOperation + " supprimée.");
+                return true;
+            }
+        }
+        System.out.println("Aucune opération trouvée avec l'ID " + idOperation);
+        return false;
+    }
 }

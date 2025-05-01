@@ -12,6 +12,10 @@ public abstract class Equipement { // abs pour rassembler les opérations commun
     protected String refEquipement;
     protected String dEquipement;
     
+ public String getRefEquipement() {
+    return refEquipement;
+}
+   
     public Equipement(String refEquipement,String dEquipement ){
         this.refEquipement = refEquipement;
         this.dEquipement = dEquipement;

@@ -4,79 +4,59 @@
  */
 package Modele;
 
-import java.util.ArrayList;
 
-/**
- *
- * @author chloe
- */
 public class Operateur {
     private String nom;
     private String prenom;
-    private String code;// peut aussi faire super classe personne pour regrouper mes 3 attributs
-    //private ArrayList<String> competence; 
+    private String code; // Peut faire partie d'une superclasse "Personne", comme vous voulez
     private boolean etat;
-    
-    public Operateur (String nom,String prenom, String code, boolean etat){
+
+    public Operateur(String nom, String prenom, String code, boolean etat) {
         this.nom = nom;
         this.prenom = prenom;
         this.code = code;
-        //this.competence = competence;
-        this.etat = etat;
-    }
-    
-    public void afficherOperateur(){
-        System.out.println("nom"+nom);
-        System.out.println("prénom"+prenom);
-        System.out.println("code"+code);
-        //System.out.println("liste des compétences"+ competence);
-        System.out.println("état"+etat);
-    }
-    
-    //nécessaire ?
-    //public boolean peutUtiliser(String typeMachine) {
-    //    return competences.contains(typeMachine);
-    //}
-    
-    /*public ArrayList<String> getCompetence() {
-        return competence;
-    }*/
-
-    public boolean getEtat() {
-        return etat;
-    }
-
-    /*public void setCompetence(ArrayList<String> competence) {
-        this.competence = competence;
-    }*/
-
-    public void setEtat(boolean etat) {
         this.etat = etat;
     }
 
+    public void afficherOperateur() {
+        System.out.println("=== Opérateur ===");
+        System.out.println("Nom : " + nom);
+        System.out.println("Prénom : " + prenom);
+        System.out.println("Code : " + code);
+        System.out.println("État : " + (etat ? "Disponible" : "Occupé"));
+    }
+
+    // Getters
     public String getNom() {
         return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
     }
 
     public String getPrenom() {
         return prenom;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
     public String getCode() {
         return code;
+    }
+
+    public boolean getEtat() {
+        return etat;
+    }
+
+    // Setters
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
     public void setCode(String code) {
         this.code = code;
     }
-    
-}
 
+    public void setEtat(boolean etat) {
+        this.etat = etat;
+    }
+}

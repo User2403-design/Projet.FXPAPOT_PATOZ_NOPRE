@@ -45,5 +45,4 @@ public class Produit {
     public void setdProduit(String dProduit) {
         this.dProduit = dProduit;
     }
-    
 }
