@@ -22,7 +22,8 @@ public class Magasindebrut {
         this.matiere = matiere;
         this.quantite = quantite;
     }
-    
+  
+
     //plus simple de faire cette classe dans Stockage 
     //public String verifierStock (String matiere, double quantite){
         //crée un (hasmap) liste dans classe Stockage et faire vérif si ce qu'on demande est contenu en recup attribue de chaque el magbrut 
