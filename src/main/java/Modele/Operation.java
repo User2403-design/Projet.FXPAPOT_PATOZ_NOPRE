@@ -23,9 +23,8 @@ public class Operation {
     public void afficherOperation() {
         System.out.println("Référence Opération: " + refOperation);
         System.out.println("Désignation: " + idOperation);
-        refEquipement.afficherEquipement(); //affiche les information de l'équiepement
         if (refEquipement != null) { // sécurise si jamais refEquiement est null
-    refEquipement.afficherEquipement();
+     refEquipement.afficherEquipement();
 } else {
     System.out.println("Aucun équipement assigné.");
 }
