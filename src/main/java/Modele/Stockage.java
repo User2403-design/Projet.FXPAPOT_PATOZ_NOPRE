@@ -16,7 +16,7 @@ public class Stockage {
     private ArrayList<Machine> listeMachines; 
     private ArrayList<Operation> listeOperations;
     private ArrayList<Operateur> listeOperateurs;
-    private ArrayList<Equipement> listeEquipements;
+    private ArrayList<Equipement> listeEquipements;// a enlever
     private ArrayList<Gamme> listeGammes;
     private ArrayList<Produit> listeProduits;
     private ArrayList<Magasindebrut> listeMagDeBrut;
