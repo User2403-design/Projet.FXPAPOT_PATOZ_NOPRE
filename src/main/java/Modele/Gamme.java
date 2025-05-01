@@ -70,6 +70,7 @@ public class Gamme {
         System.out.println(" - Réf Opération : " + op.getRefOperation() + ", Durée : " + op.getDureeOperation() + " minutes, Equipement utilisé : " + op.getRefEquipement().getRefEquipement());
     }
     }    
+    
     public float coutGamme(){    
         float coutTotal = 0;
         for (Operation op : operations){ //je crois erreur car getRef est un string or coutope se fait sur un type Eq : effectivement

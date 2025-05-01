@@ -33,7 +33,9 @@ public class Operation {
         this.refEquipement = refEquipement;
         this.dureeOperation = dureeOperation;
     }
-
+    
+    public void supprimerOperation 
+            
     public String getIdOperation() {
         return idOperation;
     }
