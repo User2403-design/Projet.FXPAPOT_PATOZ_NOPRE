@@ -29,8 +29,8 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
         }
         return coutTotal;
     }
-    
-    // Pour ajouter une machine à la liste
+    //Tout les methodes servant pour modifier un Poste
+    // Pour ajouter une machine à la liste  
     public void ajouterMachine(Machine machine) {
         if (machine != null){ //&& !refMachine.isEmpty()
             machines.add(machine); 
@@ -44,6 +44,12 @@ public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
         }
         return false;//renvoie true si la machine a été supprimée
     }
+    
+    public void modifierReference(String newRef){
+        this.refEquipement = newRef;
+    }
+    
+    
     @Override
     public void afficherEquipement(){
         System.out.println("Reference Poste:"+refEquipement);
