@@ -18,7 +18,7 @@ public class Poste extends Equipement{
     
 public Poste(String refPoste, String dPoste, ArrayList<Machine> machines) {
         super(refPoste,dPoste);
-        //si la liste machines n'est pas null, alors l'affecter à this.machines, sinon crée une nouvelle ArrayList<Machine>() vide
+        //si la liste machines n'est pas null, alors l'affecter à this.machines, sinon crée une nouvelle ArrayList<Machine>() vide : permet d'éviter des erreurs NullPointerException 
         this.machines = (machines != null) ? machines : new ArrayList<>();
         
     }
