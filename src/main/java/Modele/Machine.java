@@ -39,13 +39,8 @@ public class Machine extends Equipement {
             return duree;
     }
     
-   // a refaire 
+   // sert à qch ?
     @Override
-    /*public float coutOperation (Operation op){
-        Machine m = op.getRefEquipement();
-        return op.getDureeOperation()*op.getRefEquipement()
-    }*/
-    // sert pas a grand chose faut la modifier
     public float coutOperation(float dureeOperation){
         return dureeOperation * coût;
     }

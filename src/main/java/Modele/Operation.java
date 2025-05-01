@@ -20,6 +20,8 @@ public class Operation {
         this.refEquipement = refEquipement;
         this.dureeOperation = dureeOperation;
     }
+    //faire modifier et ajouter dans l'interface
+    
     public void afficherOperation() {
         System.out.println("Référence Opération: " + refOperation);
         System.out.println("Désignation: " + idOperation);
@@ -30,9 +32,6 @@ public class Operation {
 }
         System.out.println("Durée de l'opération: " + dureeOperation + " heures");
     }
-    
-   
-    
          
     public String getIdOperation() {
         return idOperation;

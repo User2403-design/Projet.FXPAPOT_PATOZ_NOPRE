@@ -18,13 +18,7 @@ public class Operateur {
         this.etat = etat;
     }
     
-    // modifer operateur : faut faire un truc ou l'utilisateur choisi ce qu'il veut modier comme attribut car si on met un truc type constructeur il doit rerentrer toute les informations (plus simple)
-    public void ModifierOperateur(String newNom, String newPrenom, String newCode, boolean newEtat){
-        this.nom = newNom;
-        this.prenom = newPrenom;
-        this.code = newCode;
-        this.etat = newEtat;
-    }
+    // faire ajouter et modifer operateur dans l'interface
 
     public void afficherOperateur() {
         System.out.println("=== Opérateur ===");

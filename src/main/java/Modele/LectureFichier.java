@@ -19,7 +19,7 @@ import java.io.*;
 import java.util.*;
 public class LectureFichier {
       
-    public static Map<String, ArrayList<Evenement>> LireFichier (String nomFichier) {// pk ArrayList ?
+    public static Map<String, ArrayList<Evenement>> LireFichier (String nomFichier) {// ArrayList car une machine peut avoir plusieurs évenement
     Map<String, ArrayList<Evenement>> map = new HashMap<>();
     
     try (BufferedReader lire = new BufferedReader(new FileReader(nomFichier))) {
