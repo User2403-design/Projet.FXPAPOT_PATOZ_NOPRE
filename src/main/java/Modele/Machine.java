@@ -30,8 +30,9 @@ public class Machine extends Equipement {
     
         
     
-    public float duree (Produit p){
-            //écrire operation 
+    public float duree (Produit p, String refmachine){
+            //parcourir les operations dans la gamme liée au prduit et faire verif quand l'equipement utilisé à la mm ref que celui entrée en parametre, 
+            //peut être initialisé une variable duree et ajouter a durée, à chaque fois que la verif renvoire true, le temps de l'operation qui utilise la machine  
             return duree;
     }
     
