@@ -115,9 +115,6 @@ public class Stockage {
         this.listePostes = listePostes;
     }
     
-    
-    
-    
     public void ajouterStocke (Magasindebrut stocke){
         this.listeMagDeBrut.add(stocke);
     }
@@ -186,6 +183,8 @@ public class Stockage {
     public void ajouterProduit(Produit produit) {
         this.listeProduits.add(produit); 
     }
+    
+    //methodes pour supprimer
     
         public void supprimerOperation(String refOperation) {
     Operation aSupprimer = null;
