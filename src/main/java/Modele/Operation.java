@@ -23,19 +23,18 @@ public class Operation {
     public void afficherOperation() {
         System.out.println("Référence Opération: " + refOperation);
         System.out.println("Désignation: " + idOperation);
-        refEquipement.afficherEquipement();  // Affiche les informations de l'équipement
+        refEquipement.afficherEquipement(); //affiche les information de l'équiepement
+        if (refEquipement != null) { // sécurise si jamais refEquiement est null
+    refEquipement.afficherEquipement();
+} else {
+    System.out.println("Aucun équipement assigné.");
+}
         System.out.println("Durée de l'opération: " + dureeOperation + " heures");
     }
     
-    public void ajouterOperation (String idOperation,String refOperation,Equipement refEquipement, float dureeOperation){
-        this.idOperation = idOperation;
-        this.refOperation = refOperation;
-        this.refEquipement = refEquipement;
-        this.dureeOperation = dureeOperation;
-    }
+   
     
-    public void supprimerOperation 
-            
+         
     public String getIdOperation() {
         return idOperation;
     }
@@ -67,7 +66,6 @@ public class Operation {
     public void setDureeOperation(float dureeOperation) {
         this.dureeOperation = dureeOperation;
     }
-    
-    
 }
+
 
