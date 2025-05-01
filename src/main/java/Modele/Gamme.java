@@ -23,7 +23,7 @@ public class Gamme {
     // le constructeur et créeGamme font la mm chose donc on fait qd mm créeGamme ?
     
   
-    //jsp laquel des deux est la mieux 
+    //A refaire 
     public void modifierGamme (ArrayList<Operation> operations, ArrayList<Equipement> equipements ){
         this.operations = operations;
         this.equipements = equipements;
@@ -55,12 +55,13 @@ public class Gamme {
     }
 }
     
-    public void supprimerGamme(){
-        this.refGamme = null;
-        this.operations.clear(); // clear = methode qui vide une liste en gardant sa ref (pas besoin de crée nouvelle instance : this.ope = list vide)
-        this.equipements.clear();
+    //public void supprimerGamme(){
+        //this.refGamme = null;
+        //this.operations.clear(); // clear = methode qui vide une liste en gardant sa ref (pas besoin de crée nouvelle instance : this.ope = list vide)
+        //this.equipements.clear();
         // pareil peut supp q'une seul ope si besoin avec index : le faire dans modifier ! 
-    }
+    //}
+    
     public void afficherGamme (){
         System.out.println ("Référence de la Gamme :"+refGamme);
         for (Equipement e : equipements){
@@ -74,12 +75,13 @@ public class Gamme {
     
     public float coutGamme(){    
         float coutTotal = 0;
-        for (Operation op : operations){ //je crois erreur car getRef est un string or coutope se fait sur un type Eq : effectivement
+        for (Operation op : operations){ 
             coutTotal += op.getRefEquipement().coutOperation(op.getDureeOperation());//pr avoir le cout d'une gamme = pls opération on additionne le cout de chaque opé et ce cout est calculé par rapport à la machine(equipement) utilisé dans l'opé donc on recup cet attribut et on lui calcule son cout avec le meth def dans Machine qui prend en para la durée de l'op
         }        
         return coutTotal;         
     }
     
+    //a changer 
     public float dureeGamme() {
         float dureeTotal = 0;
         for (Operation opr : operations) {
