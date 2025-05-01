@@ -29,7 +29,7 @@ public class Operateur {
         System.out.println("nom"+nom);
         System.out.println("prénom"+prenom);
         System.out.println("code"+code);
-        System.out.println("liste des compétences"+ competence);
+        //System.out.println("liste des compétences"+ competence);
         System.out.println("état"+etat);
     }
     
@@ -38,17 +38,17 @@ public class Operateur {
     //    return competences.contains(typeMachine);
     //}
     
-    public ArrayList<String> getCompetence() {
+    /*public ArrayList<String> getCompetence() {
         return competence;
-    }
+    }*/
 
     public boolean getEtat() {
         return etat;
     }
 
-    public void setCompetence(ArrayList<String> competence) {
+    /*public void setCompetence(ArrayList<String> competence) {
         this.competence = competence;
-    }
+    }*/
 
     public void setEtat(boolean etat) {
         this.etat = etat;
